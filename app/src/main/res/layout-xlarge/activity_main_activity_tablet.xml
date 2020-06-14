@@ -1,0 +1,208 @@
+<RelativeLayout xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.idownward.placartruco.MainActivity"
+    android:background="#0b3406">
+
+    <!-- view for AdMob Banner Ad -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nós"
+        android:id="@+id/lblJ1"
+        android:inputType="textMultiLine"
+        android:minWidth="10dp"
+        android:maxWidth="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="65dp"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:layout_marginTop="90dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Eles"
+        android:id="@+id/lblJ2"
+        android:inputType="textMultiLine"
+        android:minWidth="10dp"
+        android:maxWidth="100dp"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:layout_alignTop="@+id/lblJ1"
+        android:layout_alignLeft="@+id/lblEles"
+        android:layout_alignStart="@+id/lblEles" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/lblNos"
+        android:textColor="#ffffff"
+        android:textSize="75sp"
+        android:layout_below="@+id/lblJ1"
+        android:layout_alignLeft="@+id/lblJ1"
+        android:layout_alignStart="@+id/lblJ1"
+        android:layout_marginTop="10dp"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/lblEles"
+        android:textColor="#ffffff"
+        android:textSize="75sp"
+        android:layout_alignTop="@+id/lblNos"
+        android:layout_alignLeft="@+id/be1"
+        android:layout_alignStart="@+id/be1"
+        android:layout_marginLeft="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="x"
+        android:id="@+id/textView5"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:layout_above="@+id/bn1"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="75dp"
+        android:text="+1"
+        android:id="@+id/bn1"
+        android:layout_below="@+id/lblNos"
+        android:layout_alignLeft="@+id/lblNos"
+        android:layout_alignStart="@+id/lblNos"
+        android:background="#ffffff"
+        android:layout_marginTop="40dp"
+        android:onClick="clickBn1" />
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="75dp"
+        android:text="+3"
+        android:id="@+id/bn3"
+        android:background="#ffffff"
+        android:layout_below="@+id/bn1"
+        android:layout_alignLeft="@+id/bn1"
+        android:layout_alignStart="@+id/bn1"
+        android:layout_marginTop="15dp"
+        android:onClick="clickBn3" />
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="75dp"
+        android:text="+1"
+        android:id="@+id/be1"
+        android:background="#ffffff"
+        android:onClick="clickBe1"
+        android:layout_toRightOf="@+id/adView"
+        android:layout_toEndOf="@+id/adView"
+        android:layout_alignTop="@+id/bn1" />
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="75dp"
+        android:text="+3"
+        android:id="@+id/be3"
+        android:background="#ffffff"
+        android:onClick="clickBe3"
+        android:layout_alignTop="@+id/bn3"
+        android:layout_alignLeft="@+id/be1"
+        android:layout_alignStart="@+id/be1" />
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="75dp"
+        android:text="+6"
+        android:id="@+id/be6"
+        android:background="#ffffff"
+        android:layout_below="@+id/be3"
+        android:layout_alignLeft="@+id/be3"
+        android:layout_alignStart="@+id/be3"
+        android:layout_marginTop="15dp"
+        android:onClick="clickBe6" />
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="75dp"
+        android:text="+9"
+        android:id="@+id/be9"
+        android:background="#ffffff"
+        android:layout_below="@+id/be6"
+        android:layout_alignLeft="@+id/be6"
+        android:layout_alignStart="@+id/be6"
+        android:layout_marginTop="15dp"
+        android:onClick="clickBe9" />
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="75dp"
+        android:text="+6"
+        android:id="@+id/bn6"
+        android:background="#ffffff"
+        android:layout_above="@+id/be9"
+        android:layout_alignLeft="@+id/bn3"
+        android:layout_alignStart="@+id/bn3"
+        android:layout_marginTop="15dp"
+        android:onClick="clickBn6" />
+
+    <Button
+        android:layout_width="90dp"
+        android:layout_height="75dp"
+        android:text="+9"
+        android:id="@+id/bn9"
+        android:background="#ffffff"
+        android:layout_below="@+id/bn6"
+        android:layout_alignLeft="@+id/bn6"
+        android:layout_alignStart="@+id/bn6"
+        android:layout_marginTop="15dp"
+        android:onClick="clickBn9" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Zerar"
+        android:id="@+id/bZerar"
+        android:background="#0b3406"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/be3"
+        android:textSize="25sp"
+        android:onClick="clickZerar"
+        android:layout_above="@+id/be6" />
+
+    <Button
+        android:layout_width="140dp"
+        android:layout_height="80dp"
+        android:text="trocar nomes"
+        android:id="@+id/btnNovosJogadores"
+        android:background="#0b3406"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:onClick="clickTrocarNomes"
+        android:layout_alignBottom="@+id/be9"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
